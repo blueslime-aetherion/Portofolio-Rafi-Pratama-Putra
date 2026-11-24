@@ -2,562 +2,505 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Portofolio Rafi Pratama Putra: pengalaman GTRA dan pemetaan GIS di Kabupaten Merangin, serta aplikasi Flutter.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rafi Pratama Putra">
-<meta property="og:description" content="Portofolio Rafi Pratama Putra: pengalaman GTRA dan pemetaan GIS di Kabupaten Merangin, serta aplikasi Flutter.">
-<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Rafi Pratama Putra</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rafi Pratama Putra — Developer, Designer &amp; Creator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: glass side rail on desktop, floating glass bar on phone; one short scroll of five sections.
-   Direction: modern blue, iOS-like glass over a soft blue field, quiet type, parcel-map motif from the GTRA work. */
-:root {
-  --bg: #EDF2FB;
-  --fg: #0D1A33;
-  --muted: #45557A;
-  --accent: #1D5FE0;
-  --on-accent: #FFFFFF;
-  --glass: rgba(255, 255, 255, 0.66);
-  --glass-strong: rgba(255, 255, 255, 0.86);
-  --line: rgba(22, 52, 112, 0.14);
-  --blob-a: rgba(64, 130, 255, 0.35);
-  --blob-b: rgba(120, 190, 255, 0.35);
-  --ok: #0C7A43;
-  --ok-bg: rgba(18, 160, 90, 0.14);
-  --poly-a: rgba(29, 95, 224, 0.22);
-  --poly-b: rgba(29, 95, 224, 0.1);
-  --poly-hot: rgba(29, 95, 224, 0.42);
-  --shadow: 0 10px 40px rgba(25, 60, 130, 0.12);
-  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+:root{
+  --bg:#eef1f6; --ink:#141b3a; --muted:#5b6482; --line:rgba(20,27,58,.12);
+  --navy:#111a3d; --navy2:#0b1230; --blue:#2f6df6; --gold:#f2c230; --teal:#0e9aa7;
+  --dark:#0c0e12; --dark-card:#14171d; --neon:#4d8dff;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #070E1E;
-    --fg: #E8EEFC;
-    --muted: #A3B2D1;
-    --accent: #7AABFF;
-    --on-accent: #06122B;
-    --glass: rgba(24, 38, 70, 0.55);
-    --glass-strong: rgba(24, 38, 70, 0.82);
-    --line: rgba(255, 255, 255, 0.12);
-    --blob-a: rgba(40, 100, 255, 0.35);
-    --blob-b: rgba(30, 150, 230, 0.22);
-    --ok: #5BE59A;
-    --ok-bg: rgba(60, 220, 140, 0.14);
-    --poly-a: rgba(122, 171, 255, 0.22);
-    --poly-b: rgba(122, 171, 255, 0.09);
-    --poly-hot: rgba(122, 171, 255, 0.45);
-    --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #070E1E;
-  --fg: #E8EEFC;
-  --muted: #A3B2D1;
-  --accent: #7AABFF;
-  --on-accent: #06122B;
-  --glass: rgba(24, 38, 70, 0.55);
-  --glass-strong: rgba(24, 38, 70, 0.82);
-  --line: rgba(255, 255, 255, 0.12);
-  --blob-a: rgba(40, 100, 255, 0.35);
-  --blob-b: rgba(30, 150, 230, 0.22);
-  --ok: #5BE59A;
-  --ok-bg: rgba(60, 220, 140, 0.14);
-  --poly-a: rgba(122, 171, 255, 0.22);
-  --poly-b: rgba(122, 171, 255, 0.09);
-  --poly-hot: rgba(122, 171, 255, 0.45);
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
-  color-scheme: dark;
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.disp{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:max(20px,env(safe-area-inset-left))}
+
+/* floating pill nav */
+.nav{position:fixed;top:16px;right:16px;z-index:50;display:flex;gap:2px;align-items:center;padding:5px;border-radius:999px;
+  background:rgba(255,255,255,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);
+  border:1px solid var(--line);box-shadow:0 8px 30px rgba(20,27,58,.1)}
+.nav a{font-size:12px;font-weight:600;text-decoration:none;padding:8px 12px;border-radius:999px;color:var(--muted);white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);background:rgba(20,27,58,.07)}
+.nav a.cta{background:var(--ink);color:#fff}
+.nav .brand{font-family:var(--display);font-size:14px;padding:6px 12px;color:var(--ink);letter-spacing:.04em}
+@media(max-width:720px){.nav{left:12px;right:12px;justify-content:space-between;overflow-x:auto}.nav .brand{display:none}.nav a{padding:8px 9px;font-size:11.5px}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;
+  background:radial-gradient(60rem 36rem at 70% 40%,#fff 0,transparent 70%),linear-gradient(180deg,#f4f6fa,#e7ebf3)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr .6fr;gap:24px;align-items:center;width:100%;padding-block:96px 90px}
+.hero h1{font-size:clamp(3.6rem,7.6vw,7rem);color:var(--navy)}
+.facts{margin-top:28px;display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts li{display:flex;gap:10px;align-items:center}
+.facts svg{width:14px;height:14px;flex:none;stroke:var(--muted);fill:none;stroke-width:1.8}
+.status{display:inline-flex;gap:8px;align-items:center;margin-bottom:18px;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;color:#0b7a45;background:rgba(18,160,90,.12)}
+.status i{width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.stage{position:relative;justify-self:center;width:min(100%,380px);aspect-ratio:900/1496}
+.stage .shadow{position:absolute;left:50%;bottom:2%;width:70%;height:6%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(20,27,58,.28),transparent);filter:blur(6px)}
+.portrait{position:absolute;inset:0;z-index:2}
+.portrait img{width:100%;height:100%;object-fit:contain;object-position:bottom;-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}
+.portrait .ph{width:100%;height:100%}
+.snake{position:absolute;left:-40%;top:-8%;width:180%;height:116%;pointer-events:none}
+.snake.back{z-index:1}.snake.front{z-index:3}
+.glow{position:absolute;inset:8% -10%;z-index:0;border-radius:50%;background:radial-gradient(closest-side,rgba(47,109,246,.35),transparent);opacity:0;transition:opacity 1.2s}
+body.aura-on .glow{opacity:1}
+.side{justify-self:end;align-self:center;display:flex;flex-direction:column;gap:14px;width:100%;max-width:210px}
+.mini{padding:14px;border-radius:16px;background:rgba(255,255,255,.7);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.mini small{display:block;font:500 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mini b{display:block;font:400 2rem/1 var(--display);margin-top:4px}
+.mini svg{width:100%;height:36px;margin-top:6px}
+.aura-btn{position:absolute;left:max(20px,env(safe-area-inset-left));bottom:24px;z-index:5;display:flex;gap:12px;align-items:center;background:none;border:0;cursor:pointer;font:inherit;text-align:left;color:var(--ink)}
+.aura-btn .dot{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;transition:background .3s,color .3s}
+.aura-btn .dot svg{width:12px;height:12px;fill:currentColor}
+body.aura-on .aura-btn .dot{background:var(--ink);color:#fff}
+.aura-btn b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.aura-btn small{display:block;font-size:11px;color:var(--muted)}
+.scroll-hint{position:absolute;right:24px;bottom:28px;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+@media(max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:84px 96px;gap:8px}
+  .hero h1{font-size:clamp(3.4rem,17vw,6rem)}
+  .stage{width:min(78vw,340px);margin-top:-6px}
+  .side{display:none}
+  .scroll-hint{display:none}
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-  overflow-x: hidden;
-}
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(52rem 38rem at 12% -8%, var(--blob-a), transparent 65%),
-    radial-gradient(46rem 34rem at 100% 28%, var(--blob-b), transparent 62%);
-}
-a { color: var(--accent); }
-h1, h2, h3, p, ul { margin: 0; }
-ul { padding: 0; list-style: none; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+/* about (dark navy) */
+.about{background:var(--navy);color:#e9eeff;padding:110px 0 100px;position:relative;overflow:hidden}
+.about h2{font-size:clamp(3.4rem,9vw,7rem);color:#fff;margin-bottom:34px}
+.about .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:48px}
+.about p{color:#b9c4e6;font-size:1.05rem;max-width:58ch}
+.about p+p{margin-top:16px}
+.boxes{display:grid;gap:14px;align-content:start}
+.box{padding:16px 18px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.04)}
+.box small{display:block;font:500 11px var(--mono);letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.box span{font-weight:600}
+@media(max-width:820px){.about .grid{grid-template-columns:1fr;gap:28px}.about{padding:80px 0}}
 
-.skip {
-  position: absolute; left: 16px; top: -64px; z-index: 100;
-  background: var(--accent); color: var(--on-accent);
-  padding: 10px 16px; border-radius: 10px; text-decoration: none; font-weight: 600;
-}
-.skip:focus { top: 12px; }
+/* section heading */
+.sec{padding:110px 0 30px}
+.sec h2{font-size:clamp(3rem,8vw,6rem);color:var(--navy);margin-bottom:12px}
+.sec .sub{color:var(--muted);max-width:60ch;margin-bottom:36px}
 
-.glass {
-  background: var(--glass);
-  -webkit-backdrop-filter: blur(22px) saturate(1.5);
-  backdrop-filter: blur(22px) saturate(1.5);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
+/* experience */
+.job{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:18px;box-shadow:0 10px 40px rgba(20,27,58,.06)}
+.job h3{font-size:1.35rem;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.meta{font-size:14px;color:var(--muted)}
+.ticks{display:grid;gap:10px}
+.ticks li{position:relative;padding-left:22px;max-width:75ch}
+.ticks li::before{content:"";position:absolute;left:2px;top:.7em;width:8px;height:8px;background:var(--blue);transform:rotate(45deg);border-radius:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 12px var(--mono);padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:#f6f8fc}
+.maps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.maps figure{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;display:grid;gap:8px}
+.maps img{border-radius:10px;width:100%;height:auto;border:1px solid var(--line)}
+.maps figcaption{padding:0 4px 4px;font-size:13px;color:var(--muted)}
+.maps strong{display:block;color:var(--ink);font-size:14px}
+.note{font:500 12px var(--mono);color:var(--muted);margin-top:10px}
+.tl{display:grid;gap:14px;margin-top:34px}
+.tl>li{display:grid;grid-template-columns:170px 1fr;gap:24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+.tl-date{font:500 12px var(--mono);color:var(--muted);letter-spacing:.04em;padding-top:4px}
+.tl h4{font-size:1.05rem;font-weight:700;margin-bottom:10px}
+@media(max-width:820px){.maps{grid-template-columns:1fr}.tl>li{grid-template-columns:1fr;gap:6px}.job{padding:20px}}
 
-/* Navigation */
-.rail {
-  position: fixed; z-index: 40;
-  display: flex; gap: 4px;
-  left: 0; right: 0; bottom: 0;
-  padding: 8px max(16px, env(safe-area-inset-right, 0px)) calc(8px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
-  border-radius: 0; border-width: 1px 0 0 0;
-  justify-content: space-between;
-}
-.rail .mark { display: none; }
-.rail a {
-  flex: 1; min-width: 0; text-align: center;
-  padding: 10px 4px; min-height: 44px;
-  font-size: 12px; font-weight: 600; text-decoration: none; color: var(--muted);
-  border-radius: 12px; display: flex; align-items: center; justify-content: center;
-}
-.rail a[aria-current="true"] { background: var(--accent); color: var(--on-accent); }
-.rail a:hover { color: var(--fg); }
-.rail a[aria-current="true"]:hover { color: var(--on-accent); }
+/* projects */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px 28px}
+.pcard{display:flex;flex-direction:column;gap:12px;min-width:0}
+.pimg{border-radius:18px;aspect-ratio:16/10;overflow:hidden;position:relative;display:flex;justify-content:center;gap:12px;padding:20px 20px 0;align-items:flex-end}
+.pimg.a{background:linear-gradient(135deg,#d9e6ff,#b9d0ff)}
+.pimg.b{background:linear-gradient(135deg,#f6e6c6,#ecc98a)}
+.pimg.c{background:linear-gradient(135deg,#1a2347,#0b1230)}
+.pimg img{height:112%;width:auto;border-radius:16px 16px 0 0;box-shadow:0 14px 30px rgba(20,27,58,.28);transition:transform .5s}
+.pimg img:nth-child(2){transform:translateY(14px)}
+.pcard:hover .pimg img{transform:translateY(-6px)}
+.pcard:hover .pimg img:nth-child(2){transform:translateY(4px)}
+.pimg .kaito{font-size:clamp(3rem,7vw,5.2rem);color:#fff;align-self:center;opacity:.95;letter-spacing:.04em}
+.ptop{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pcard h3{font-size:1.5rem}
+.pcard p{color:var(--muted);font-size:15px}
+.btn{display:inline-flex;align-items:center;gap:8px;width:fit-content;min-height:40px;padding:0 18px;border-radius:8px;background:var(--teal);color:#fff;text-decoration:none;font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+details.more{margin-top:2px}
+details.more summary{list-style:none;cursor:pointer;display:inline-flex}
+details.more summary::-webkit-details-marker{display:none}
+.shots{display:flex;gap:12px;overflow-x:auto;padding:14px 2px 8px;scroll-snap-type:x proximity}
+.shots a{flex:none;scroll-snap-align:start}
+.shots img{height:300px;width:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 24px rgba(20,27,58,.15)}
+@media(max-width:820px){.pgrid{grid-template-columns:1fr}}
 
-.wrap {
-  position: relative; z-index: 1;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 28px 110px;
-}
-.inner { max-width: 920px; margin-inline: auto; display: flex; flex-direction: column; gap: 72px; }
+/* skills (dark) */
+.skills{background:var(--dark);color:#eef1f8;margin-top:100px;padding:100px 0;position:relative}
+.skills h2{font-size:clamp(3rem,8vw,6rem);color:#fff;margin-bottom:34px}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sk{background:var(--dark-card);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:20px;display:grid;gap:14px;align-content:start}
+.sk .tag{width:26px;height:26px;border-radius:6px;background:var(--neon);box-shadow:0 0 22px rgba(77,141,255,.55)}
+.sk h3{font-size:1.05rem;font-weight:700}
+.sk li{padding:8px 0;border-top:1px solid rgba(255,255,255,.08);font-size:14px;color:#aeb7cf}
+.edu{margin-top:18px;border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:22px;background:var(--dark-card)}
+.edu small{font:500 11px var(--mono);letter-spacing:.1em;color:var(--neon);text-transform:uppercase}
+.edu h3{font-size:1.1rem;margin:6px 0}
+.edu p{color:#aeb7cf;max-width:75ch;font-size:15px}
+@media(max-width:960px){.sgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.sgrid{grid-template-columns:1fr}}
 
-section { scroll-margin-top: 24px; }
-.eyebrow {
-  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--muted);
-}
-h2 { font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2rem); line-height: 1.2; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
-.sec-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+/* contact */
+.contact{padding:100px 0 60px}
+.contact h2{font-size:clamp(3.4rem,10vw,8rem);color:var(--navy);margin-bottom:20px}
+.contact p{color:var(--muted);max-width:56ch;margin-bottom:26px}
+.rows{display:grid;gap:10px;max-width:560px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.row .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.row .v{font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.copy{min-height:36px;padding:0 14px;border-radius:8px;border:1px solid var(--line);background:transparent;font:600 12px var(--body);cursor:pointer}
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:30px 0 40px}
 
-/* Hero */
-.hero { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; padding-top: 8px; }
-.hero > * { min-width: 0; }
-.status {
-  display: inline-flex; align-items: center; gap: 8px; width: fit-content;
-  padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 600;
-  color: var(--ok); background: var(--ok-bg);
-}
-.status i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; display: block; }
-h1 { font-size: clamp(2.4rem, 1.6rem + 4.2vw, 4rem); line-height: 1.04; font-weight: 800; letter-spacing: -0.035em; text-wrap: balance; }
-.role { font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem); color: var(--accent); font-weight: 700; }
-.lead { color: var(--muted); max-width: 52ch; font-size: 1.05rem; }
-.hero-text { display: flex; flex-direction: column; gap: 18px; }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 48px; padding: 0 22px; border-radius: 14px;
-  font: 700 15px var(--font-body); text-decoration: none; cursor: pointer;
-  border: 1px solid var(--line); color: var(--fg); background: var(--glass-strong);
-}
-.btn.primary { background: var(--accent); color: var(--on-accent); border-color: transparent; }
-.btn:hover { transform: translateY(-1px); }
-.btn { transition: transform 0.15s ease; }
-
-.map { border-radius: 28px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
-.map svg { width: 100%; height: auto; display: block; }
-.map .p1 { fill: var(--poly-a); stroke: var(--accent); stroke-width: 1.2; }
-.map .p2 { fill: var(--poly-b); stroke: var(--accent); stroke-width: 1; stroke-opacity: 0.6; }
-.map .hot { fill: var(--poly-hot); stroke: var(--accent); stroke-width: 2; }
-.map .bound { fill: none; stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 5 5; opacity: 0.7; }
-.map text { font-family: var(--font-mono); font-size: 10px; fill: var(--fg); }
-.map .tag-bg { fill: var(--glass-strong); stroke: var(--line); stroke-width: 1; }
-.map figcaption { font-size: 12px; color: var(--muted); font-family: var(--font-mono); padding: 0 6px 2px; }
-.map { margin: 0; }
-.map img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid var(--line); }
-
-/* Experience */
-.exp { border-radius: 28px; padding: 24px; display: flex; flex-direction: column; gap: 20px; }
-.exp-top { display: flex; flex-direction: column; gap: 6px; }
-.exp h3 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.25; }
-.meta { color: var(--muted); font-size: 14px; }
-.ticks { display: flex; flex-direction: column; gap: 12px; }
-.ticks li { position: relative; padding-left: 22px; max-width: 70ch; }
-.ticks li::before {
-  content: ""; position: absolute; left: 2px; top: 0.7em; width: 8px; height: 8px;
-  border-radius: 2px; background: var(--accent); transform: rotate(45deg);
-}
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  font-family: var(--font-mono); font-size: 12px; padding: 5px 10px; border-radius: 8px;
-  border: 1px solid var(--line); background: var(--glass-strong); color: var(--fg);
-}
-.exp-2 { margin-top: 16px; border-radius: 22px; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px; }
-.exp-2 h3 { font-size: 1.05rem; font-weight: 700; }
-
-.gallery { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
-.gal-title { font-size: 1.05rem; font-weight: 800; }
-.maps { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.mapcard { margin: 0; border-radius: 22px; padding: 10px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-.mapcard a { display: block; border-radius: 14px; }
-.mapcard img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); }
-.mapcard figcaption { display: flex; flex-direction: column; padding: 0 6px 4px; }
-.mapcard strong { font-size: 15px; font-weight: 700; }
-.mapcard span { font-size: 13px; color: var(--muted); }
-@media (min-width: 900px) { .maps { grid-template-columns: repeat(3, 1fr); } }
-
-/* Projects */
-.grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.card { border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-.card h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; }
-.state {
-  font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px;
-  color: var(--muted); border: 1px solid var(--line);
-}
-.card p { color: var(--muted); font-size: 15px; }
-.shots {
-  display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 10px;
-  scroll-snap-type: x proximity; max-width: 100%;
-}
-.shots a { flex: none; scroll-snap-align: start; border-radius: 18px; display: block; }
-.shots img {
-  height: 320px; width: auto; max-width: none; display: block; border-radius: 18px;
-  border: 1px solid var(--line); box-shadow: var(--shadow);
-}
-.shot-note { font-size: 12px !important; font-family: var(--font-mono); }
-.card .chips { margin-top: auto; }
-.grid > .card:last-child:nth-child(odd) { grid-column: 1 / -1; }
-
-/* Skills */
-.skills { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.skill { border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
-.skill h3 { font-size: 1.05rem; font-weight: 800; }
-.skill li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; }
-.skill li:first-child { border-top: 0; }
-.thesis { margin-top: 16px; border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
-.thesis h3 { font-size: 1.05rem; font-weight: 800; }
-.thesis p { color: var(--muted); max-width: 70ch; }
-
-/* Contact */
-.contact { border-radius: 28px; padding: 28px 24px; display: flex; flex-direction: column; gap: 18px; }
-.contact p { color: var(--muted); max-width: 56ch; }
-.rows { display: flex; flex-direction: column; gap: 10px; }
-.row {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-  padding: 12px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--glass-strong);
-}
-.row .k { font-family: var(--font-mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-.row .v { font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
-.row a.v { text-decoration: none; }
-.copy {
-  min-height: 40px; padding: 0 14px; border-radius: 10px; cursor: pointer;
-  border: 1px solid var(--line); background: transparent; color: var(--fg); font: 600 13px var(--font-body);
-}
-.foot { text-align: center; color: var(--muted); font-size: 13px; }
-
-@media (min-width: 700px) {
-  .grid { grid-template-columns: 1fr 1fr; }
-  .skills { grid-template-columns: repeat(2, 1fr); }
-  .exp { padding: 32px; }
-}
-@media (min-width: 960px) {
-  .hero { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
-  .wrap { padding-block: 120px 80px; }
-  section { scroll-margin-top: 96px; }
-  html { scroll-padding-top: 96px; }
-  .rail {
-    top: 16px; bottom: auto; left: 50%; right: auto;
-    transform: translateX(-50%);
-    width: max-content; max-width: calc(100% - 32px);
-    flex-direction: row; align-items: center; justify-content: center; gap: 4px;
-    padding: 8px; border-radius: 999px; border-width: 1px;
-  }
-  .rail .mark {
-    display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; margin: 0 8px 0 0; border-radius: 999px;
-    background: var(--accent); color: var(--on-accent); font-weight: 800; font-size: 14px; letter-spacing: -0.02em;
-  }
-  .rail a { flex: none; font-size: 14px; padding: 0 18px; min-height: 40px; border-radius: 999px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .btn { transition: none; }
-  .btn:hover { transform: none; }
-}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.glow{transition:none}.status i{animation:none}}
 </style>
-
 </head>
 <body>
-<a class="skip" href="#main">Langsung ke isi halaman</a>
 
-<nav class="rail glass" aria-label="Navigasi utama">
-  
-  <a href="#beranda" aria-current="true">Beranda</a>
+<nav class="nav" aria-label="Navigasi utama">
+  <a class="brand" href="#top">RAFI</a>
+  <a href="#about">Tentang</a>
   <a href="#pengalaman">Pengalaman</a>
   <a href="#proyek">Proyek</a>
   <a href="#keahlian">Keahlian</a>
-  <a href="#kontak">Kontak</a>
+  <a class="cta" href="#kontak">Kontak</a>
 </nav>
 
-<div class="wrap">
-  <main class="inner" id="main">
-
-    <section id="beranda" class="hero" aria-labelledby="nama">
-      <div class="hero-text">
-        <span class="status"><i aria-hidden="true"></i> Tersedia untuk bekerja</span>
-        <div>
-          <h1 id="nama">Rafi Pratama Putra</h1>
-        </div>
-        <p class="role">Developer, Designer &amp; Creator</p>
-        <p class="lead">Sarjana Pertanian (Agribisnis, Universitas Jambi) dengan pengalaman di administrasi pertanahan dan pemetaan GIS untuk Reforma Agraria di Kabupaten Merangin. Terbiasa menyusun laporan dan surat tugas, serta cepat belajar hal baru. Di luar kantor, saya membangun aplikasi Flutter untuk keuangan dan usaha kopi.</p>
-        <div class="cta">
-          <a class="btn primary" href="#pengalaman">Lihat pengalaman</a>
-          <a class="btn" href="#kontak">Hubungi saya</a>
-        </div>
-      </div>
-
-      <figure class="map glass">
-        <a href="peta-tora.jpg" target="_blank" rel="noopener" aria-label="Buka peta indikatif TORA ukuran penuh di tab baru">
-          <img src="peta-tora.jpg" width="2000" height="1415" alt="Peta indikasi indikatif TORA Desa Baru Nalo, Sungai Pinang, dan Tiangko, Kabupaten Merangin, menampilkan kawasan hutan, konsesi PBPH, dan hasil pendataan lahan.">
-        </a>
-        <figcaption>Peta indikasi indikatif TORA, Desa Baru Nalo, Sungai Pinang, dan Tiangko. Ketuk untuk memperbesar.</figcaption>
-      </figure>
-    </section>
-
-    <section id="pengalaman" aria-labelledby="h-peng">
-      <div class="sec-head">
-        <span class="eyebrow">Pengalaman kerja</span>
-        <h2 id="h-peng">Reforma Agraria di Kabupaten Merangin</h2>
-      </div>
-
-      <article class="exp glass">
-        <div class="exp-top">
-          <h3>Gugus Tugas Reforma Agraria (GTRA) Merangin 2026</h3>
-          <p class="meta">Kantor Pertanahan Kabupaten Merangin · Tenaga kontrak 6 bulan · 2026</p>
-        </div>
-        <ul class="ticks">
-          <li>Mengidentifikasi lokasi indikatif TORA dan potensi penataan akses lewat pengolahan data spasial dan nonspasial di ArcGIS Pro.</li>
-          <li>Menyusun peta indikasi indikatif TORA untuk Desa Baru Nalo, Sungai Pinang, dan Tiangko (skala 1:93.000, WGS 1984 UTM Zona 48S) dari data batas desa BIG, konsesi PBPH, kawasan hutan Provinsi Jambi, dan bidang persil ATR/BPN.</li>
-          <li>Berkoordinasi dengan aparat desa untuk pendataan subjek dan objek Reforma Agraria.</li>
-          <li>Menyiapkan materi dan notulen Rapat Koordinasi Awal GTRA Kabupaten Merangin (21 September 2026), termasuk materi pelibatan masyarakat dan pengelompokan TORA.</li>
-          <li>Menyusun laporan triwulan dan laporan akhir kegiatan GTRA: realisasi fisik, anggaran, kendala, dan rencana penanganan.</li>
-          <li>Mengolah data hasil lapangan di Excel, termasuk tabel atribut hasil ekspor ArcGIS Pro.</li>
-          <li>Menulis profil umum dan potensi untuk lima desa fokus, dengan data BPS dan sumber resmi sebagai acuan.</li>
-        </ul>
-        <div class="chips" aria-label="Alat dan keluaran">
-          <span class="chip">ArcGIS Pro</span>
-          <span class="chip">Shapefile</span>
-          <span class="chip">Tabel atribut → Excel</span>
-          <span class="chip">Laporan resmi</span>
-          <span class="chip">Koordinasi lintas sektor</span>
-        </div>
-      </article>
-
-      <div class="gallery">
-      <h3 class="gal-title">Peta hasil pengolahan di ArcGIS Pro</h3>
-      <div class="maps">
-      <figure class="mapcard glass">
-        <a href="peta-tiangko.jpg" target="_blank" rel="noopener" aria-label="Buka peta Desa Tiangko ukuran penuh di tab baru"><img src="peta-tiangko.jpg" width="1900" height="1343" loading="lazy" alt="Peta indikasi indikatif TORA Desa Tiangko, Kecamatan Sungai Manau, dengan fungsi kawasan, hak milik, NIB, dan hasil survei."></a>
-        <figcaption><strong>Desa Tiangko</strong><span>Kec. Sungai Manau · skala 1:30.000</span></figcaption>
-      </figure>
-      <figure class="mapcard glass">
-        <a href="peta-sungai-pinang.jpg" target="_blank" rel="noopener" aria-label="Buka peta Desa Sungai Pinang ukuran penuh di tab baru"><img src="peta-sungai-pinang.jpg" width="1900" height="1343" loading="lazy" alt="Peta indikasi indikatif TORA Desa Sungai Pinang, Kecamatan Sungai Manau, dengan kawasan hutan, konsesi PBPH, dan bidang hasil survei."></a>
-        <figcaption><strong>Desa Sungai Pinang</strong><span>Kec. Sungai Manau · skala 1:63.000</span></figcaption>
-      </figure>
-      <figure class="mapcard glass">
-        <a href="peta-baru-nalo.jpg" target="_blank" rel="noopener" aria-label="Buka peta Desa Baru Nalo ukuran penuh di tab baru"><img src="peta-baru-nalo.jpg" width="1900" height="1343" loading="lazy" alt="Peta indikasi indikatif TORA Desa Baru Nalo, Kecamatan Nalo Tantan, dengan konsesi PBPH dan hasil survei."></a>
-        <figcaption><strong>Desa Baru Nalo</strong><span>Kec. Nalo Tantan · skala 1:77.000</span></figcaption>
-      </figure>
-      </div>
-      <p class="shot-note">Nama pihak swasta pada peta disamarkan. Ketuk peta untuk memperbesar.</p>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="status"><i></i> Tersedia untuk bekerja</span>
+      <h1 class="disp">Rafi<br>Pratama<br>Putra</h1>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Provinsi Jambi, Indonesia</li>
+        <li><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5-9-5zM7 12v5c2.5 2 7.5 2 10 0v-5"/></svg>Agribisnis, S.P. · Universitas Jambi</li>
+        <li><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>GIS, Flutter &amp; UI Design</li>
+      </ul>
     </div>
 
-      <article class="exp-2 glass">
-        <h3>Administrasi pertanahan</h3>
-        <p class="meta">Pengalaman kerja dengan e-Sikap, INAFROG, P4T, TORA, SK SAKIP, dan Reforma Agraria, termasuk Kerja Praktik di Kantor Pertanahan Kabupaten Merangin.</p>
+    <div class="stage" id="stage">
+      <div class="glow"></div>
+      <canvas class="snake back" id="snBack" aria-hidden="true"></canvas>
+      <div class="portrait">
+        <img src="foto-rafi.png" alt="Rafi Pratama Putra memakai toga wisuda" onerror="this.replaceWith(document.getElementById('phTpl').content.cloneNode(true))">
+      </div>
+      <canvas class="snake front" id="snFront" aria-hidden="true"></canvas>
+      <div class="shadow"></div>
+    </div>
+
+    <aside class="side" aria-label="Ringkasan">
+      <div class="mini"><small>Pengalaman</small><b>GTRA 2026</b>
+        <svg viewBox="0 0 120 36" fill="none" stroke="#2f6df6" stroke-width="2"><path d="M2 30 L22 22 L40 26 L62 12 L84 16 L118 4"/></svg></div>
+      <div class="mini"><small>Aplikasi dibuat</small><b>3+</b></div>
+      <div class="mini"><small>IPK</small><b>3,36</b></div>
+    </aside>
+  </div>
+
+  <button class="aura-btn" id="auraBtn" type="button" aria-pressed="false">
+    <span class="dot"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7-4.5z"/></svg></span>
+    <span><b id="auraLbl">Show aura</b><small>Aktifkan efek aura</small></span>
+  </button>
+  <span class="scroll-hint">Scroll ↓</span>
+</header>
+
+<template id="phTpl">
+  <svg class="ph" viewBox="0 0 300 400" role="img" aria-label="Tempat foto: simpan foto PNG tanpa latar sebagai foto-rafi.png">
+    <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c5cfe6"/><stop offset="1" stop-color="#8d9bc0"/></linearGradient></defs>
+    <circle cx="150" cy="130" r="62" fill="url(#pg)"/><path d="M30 400c0-95 52-150 120-150s120 55 120 150z" fill="url(#pg)"/>
+    <text x="150" y="388" text-anchor="middle" font-family="monospace" font-size="11" fill="#fff">foto-rafi.png</text>
+  </svg>
+</template>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2 class="disp rv">Tentang</h2>
+    <div class="grid rv">
+      <div>
+        <p>Saya Sarjana Pertanian (Agribisnis) lulusan Universitas Jambi dengan pengalaman di administrasi pertanahan dan pemetaan GIS untuk Reforma Agraria di Kabupaten Merangin. Terbiasa menyusun laporan resmi dan surat tugas, serta cepat belajar hal baru.</p>
+        <p>Di luar kantor, saya membangun aplikasi nyata dengan Flutter untuk keuangan pribadi dan usaha kopi. Antarmuka yang baik bercerita, dan data yang baik menjawab.</p>
+      </div>
+      <div class="boxes">
+        <div class="box"><small>Pendidikan</small><span>Agribisnis, S.P. · UNJA · IPK 3,36</span></div>
+        <div class="box"><small>Berdomisili</small><span>Provinsi Jambi, Indonesia</span></div>
+        <div class="box"><small>Fokus</small><span>GIS · Administrasi · Aplikasi</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pengalaman">
+  <div class="wrap">
+    <h2 class="disp rv">Pengalaman</h2>
+    <p class="sub rv">Pengalaman di lapangan dan administrasi pertanahan.</p>
+
+    <article class="job rv">
+      <div>
+        <h3>Gugus Tugas Reforma Agraria (GTRA) Merangin 2026</h3>
+        <p class="meta">Kantor Pertanahan Kabupaten Merangin · Tenaga kontrak 6 bulan · 2026</p>
+      </div>
+      <ul class="ticks">
+        <li>Mengidentifikasi lokasi indikatif TORA dan potensi penataan akses lewat pengolahan data spasial dan nonspasial di ArcGIS Pro.</li>
+        <li>Menyusun peta indikasi indikatif TORA untuk Desa Baru Nalo, Sungai Pinang, dan Tiangko (skala 1:93.000, WGS 1984 UTM Zona 48S) dari data batas desa BIG, konsesi PBPH, kawasan hutan Provinsi Jambi, dan bidang persil ATR/BPN.</li>
+        <li>Berkoordinasi dengan aparat desa untuk pendataan subjek dan objek Reforma Agraria.</li>
+        <li>Menyiapkan materi dan notulen Rapat Koordinasi Awal GTRA Kabupaten Merangin (21 September 2026), termasuk materi pelibatan masyarakat dan pengelompokan TORA.</li>
+        <li>Menyusun laporan triwulan dan laporan akhir kegiatan GTRA: realisasi fisik, anggaran, kendala, dan rencana penanganan.</li>
+        <li>Mengolah data hasil lapangan di Excel, termasuk tabel atribut hasil ekspor ArcGIS Pro.</li>
+        <li>Menulis profil umum dan potensi untuk lima desa fokus, dengan data BPS dan sumber resmi sebagai acuan.</li>
+      </ul>
+      <div class="chips"><span class="chip">ArcGIS Pro</span><span class="chip">Shapefile</span><span class="chip">Tabel atribut → Excel</span><span class="chip">Laporan resmi</span><span class="chip">Koordinasi lintas sektor</span></div>
+    </article>
+
+    <div class="maps rv">
+      <figure><a href="peta-tiangko.jpg" target="_blank" rel="noopener"><img src="peta-tiangko.jpg" width="1900" height="1343" loading="lazy" alt="Peta indikasi indikatif TORA Desa Tiangko, Kecamatan Sungai Manau"></a><figcaption><strong>Desa Tiangko</strong>Kec. Sungai Manau · 1:30.000</figcaption></figure>
+      <figure><a href="peta-sungai-pinang.jpg" target="_blank" rel="noopener"><img src="peta-sungai-pinang.jpg" width="1900" height="1343" loading="lazy" alt="Peta indikasi indikatif TORA Desa Sungai Pinang"></a><figcaption><strong>Desa Sungai Pinang</strong>Kec. Sungai Manau · 1:63.000</figcaption></figure>
+      <figure><a href="peta-baru-nalo.jpg" target="_blank" rel="noopener"><img src="peta-baru-nalo.jpg" width="1900" height="1343" loading="lazy" alt="Peta indikasi indikatif TORA Desa Baru Nalo, Kecamatan Nalo Tantan"></a><figcaption><strong>Desa Baru Nalo</strong>Kec. Nalo Tantan · 1:77.000</figcaption></figure>
+    </div>
+    <p class="note">Nama pihak swasta pada peta disamarkan. Klik peta untuk memperbesar.</p>
+
+    <ol class="tl">
+      <li class="rv"><div class="tl-date">Agu 2024 – Okt 2025</div><div><h4>Petugas Pemutakhiran Data Pemilih (Pantarlih)</h4><ul class="ticks">
+        <li>Mencocokkan dan meneliti (coklit) data pemilih langsung ke masyarakat sesuai target dan ketentuan KPU.</li>
+        <li>Memastikan data dan dokumen akurat serta lengkap sesuai SOP.</li>
+        <li>Berkoordinasi dengan PPS dan PPK untuk melaporkan hasil kerja tepat waktu.</li>
+        <li>Menjaga netralitas, integritas, dan etika sebagai penyelenggara pemilu.</li></ul></div></li>
+      <li class="rv"><div class="tl-date">Jul – Sep 2022</div><div><h4>Magang di PT Petaling Mandraguna, Jambi</h4><ul class="ticks">
+        <li>Memantau kegiatan perkebunan: pemupukan, perawatan panen, dan pengangkutan sesuai SOP perusahaan.</li>
+        <li>Menghitung premi pekerja pemanenan.</li>
+        <li>Menyelesaikan laporan magang sesuai target waktu perusahaan.</li></ul></div></li>
+      <li class="rv"><div class="tl-date">Jun 2021 – Jun 2023</div><div><h4>Staf Divisi Bursa Usaha, MISETA Universitas Jambi</h4><ul class="ticks">
+        <li>Menyusun program kerja untuk meningkatkan minat wirausaha mahasiswa: pelatihan kewirausahaan, rebranding produk UMKM, dan praktik wirausaha.</li></ul></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="proyek">
+  <div class="wrap">
+    <h2 class="disp rv">Proyek</h2>
+    <p class="sub rv">Aplikasi yang saya bangun sendiri.</p>
+    <div class="pgrid">
+      <article class="pcard rv">
+        <div class="pimg a"><img src="dompetku-home.jpg" alt="DompetKu beranda" loading="lazy"><img src="dompetku-statistik.jpg" alt="DompetKu statistik" loading="lazy"></div>
+        <span class="ptop">Flutter · Dart · SQLite · Versi 1</span>
+        <h3 class="disp">DompetKu</h3>
+        <p>Pencatat keuangan pribadi: saldo, pemasukan dan pengeluaran, riwayat transaksi, grafik per kategori, ekspor PDF dan Excel, serta backup dan restore database.</p>
+        <details class="more"><summary><span class="btn">Detail →</span></summary>
+          <div class="shots">
+            <a href="dompetku-home.jpg" target="_blank" rel="noopener"><img src="dompetku-home.jpg" alt="DompetKu beranda" loading="lazy"></a>
+            <a href="dompetku-riwayat.jpg" target="_blank" rel="noopener"><img src="dompetku-riwayat.jpg" alt="DompetKu riwayat" loading="lazy"></a>
+            <a href="dompetku-statistik.jpg" target="_blank" rel="noopener"><img src="dompetku-statistik.jpg" alt="DompetKu statistik" loading="lazy"></a>
+            <a href="dompetku-profil.jpg" target="_blank" rel="noopener"><img src="dompetku-profil.jpg" alt="DompetKu profil" loading="lazy"></a>
+          </div><p class="note">Nominal pada tangkapan layar disamarkan.</p></details>
       </article>
-    </section>
 
-    <section id="proyek" aria-labelledby="h-proy">
-      <div class="sec-head">
-        <span class="eyebrow">Proyek pribadi</span>
-        <h2 id="h-proy">Aplikasi yang saya bangun sendiri</h2>
-      </div>
-      <div class="grid">
-        <article class="card glass">
-          <div class="card-top"><h3>DompetKu</h3><span class="state">Versi 1</span></div>
-          <p>Aplikasi pencatat keuangan pribadi: saldo, pemasukan dan pengeluaran, riwayat transaksi (geser untuk edit atau hapus), grafik pengeluaran per kategori, ekspor PDF dan Excel, serta backup dan restore database. Fitur baru sedang direncanakan.</p>
-          <div class="shots" role="group" aria-label="Tangkapan layar aplikasi">
-            <a href="dompetku-home.jpg" target="_blank" rel="noopener"><img src="dompetku-home.jpg" width="540" height="1170" loading="lazy" alt="DompetKu: beranda dengan total saldo, aksi cepat, dan ringkasan keuangan"></a>
-            <a href="dompetku-riwayat.jpg" target="_blank" rel="noopener"><img src="dompetku-riwayat.jpg" width="540" height="1170" loading="lazy" alt="DompetKu: riwayat transaksi dengan filter Semua, Bulan Ini, Hari Ini"></a>
-            <a href="dompetku-statistik.jpg" target="_blank" rel="noopener"><img src="dompetku-statistik.jpg" width="540" height="1170" loading="lazy" alt="DompetKu: grafik pengeluaran per kategori"></a>
-            <a href="dompetku-profil.jpg" target="_blank" rel="noopener"><img src="dompetku-profil.jpg" width="540" height="1170" loading="lazy" alt="DompetKu: profil dengan dark mode, warna tema, ekspor PDF dan Excel, backup dan restore database"></a>
-          </div>
-          <p class="shot-note">Nominal pada tangkapan layar disamarkan.</p>
-          <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">SQLite</span><span class="chip">Android</span></div>
-        </article>
-        <article class="card glass">
-          <div class="card-top"><h3>Brewly</h3><span class="state">Dalam pengembangan</span></div>
-          <p>Aplikasi hitung bisnis kopi: catat penjualan dengan HPP, laba, dan margin otomatis, kelola menu produk dan bahan baku beserta stok, catat pengeluaran, dan lihat laporan omzet, laba kotor, serta laba bersih dengan ekspor PDF.</p>
-          <div class="shots" role="group" aria-label="Tangkapan layar aplikasi">
-            <a href="brewly-home.jpg" target="_blank" rel="noopener"><img src="brewly-home.jpg" width="333" height="960" loading="lazy" alt="Brewly: beranda dengan omzet hari ini, pengeluaran, saldo kas, dan menu kelola bisnis"></a>
-            <a href="brewly-produk.jpg" target="_blank" rel="noopener"><img src="brewly-produk.jpg" width="443" height="960" loading="lazy" alt="Brewly: menu produk dengan kategori, ukuran, harga, dan status aktif"></a>
-            <a href="brewly-bahan.jpg" target="_blank" rel="noopener"><img src="brewly-bahan.jpg" width="394" height="960" loading="lazy" alt="Brewly: daftar bahan baku dengan harga, satuan resep, dan sisa stok"></a>
-            <a href="brewly-penjualan.jpg" target="_blank" rel="noopener"><img src="brewly-penjualan.jpg" width="443" height="960" loading="lazy" alt="Brewly: pencatatan penjualan dengan harga jual, HPP, laba, dan margin otomatis"></a>
-            <a href="brewly-pengeluaran.jpg" target="_blank" rel="noopener"><img src="brewly-pengeluaran.jpg" width="443" height="960" loading="lazy" alt="Brewly: riwayat pengeluaran usaha dengan kategori dan total"></a>
-            <a href="brewly-laporan.jpg" target="_blank" rel="noopener"><img src="brewly-laporan.jpg" width="443" height="960" loading="lazy" alt="Brewly: laporan omzet, laba kotor, laba bersih, margin, dan ekspor PDF"></a>
-          </div>
-          <p class="shot-note">Data pada tangkapan layar adalah contoh.</p>
-          <div class="chips"><span class="chip">Flutter</span><span class="chip">SQLite</span></div>
-        </article>
-        <article class="card glass">
-          <div class="card-top"><h3>KAITO</h3><span class="state">Eksperimen</span></div>
-          <p>Asisten AI desktop berbasis suara. Sudah merekam dan mentranskripsi Bahasa Indonesia; avatar Live2D dan kontrol PC masih direncanakan.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">faster-whisper</span><span class="chip">SQLite</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="keahlian" aria-labelledby="h-keah">
-      <div class="sec-head">
-        <span class="eyebrow">Keahlian</span>
-        <h2 id="h-keah">Alat dan bidang kerja</h2>
-      </div>
-      <div class="skills">
-        <div class="skill glass">
-          <h3>Pertanahan dan GIS</h3>
-          <ul>
-            <li>Identifikasi indikatif TORA</li>
-            <li>ArcGIS Pro, poligon, ekspor SHP</li>
-            <li>Data spasial dan nonspasial</li>
-            <li>Laporan formal instansi</li>
-          </ul>
-        </div>
-        <div class="skill glass">
-          <h3>Administrasi dan kantor</h3>
-          <ul>
-            <li>Microsoft Word, Excel (olah data lapangan), dan PowerPoint</li>
-            <li>Laporan triwulan, laporan akhir, surat tugas, dan dokumen dinas</li>
-            <li>Cepat belajar dan mudah beradaptasi dengan aplikasi baru</li>
-          </ul>
-        </div>
-        <div class="skill glass">
-          <h3>Pengembangan</h3>
-          <ul>
-            <li>Flutter dan Dart</li>
-            <li>SQLite</li>
-            <li>Python, speech-to-text</li>
-            <li>Desain UI aplikasi</li>
-          </ul>
-        </div>
-        <div class="skill glass">
-          <h3>Desain dan konten</h3>
-          <ul>
-            <li>UI/UX</li>
-            <li>Fotografi</li>
-            <li>Videografi</li>
-          </ul>
-        </div>
-      </div>
-      <article class="thesis glass">
-        <span class="eyebrow">Pendidikan</span>
-        <h3>Sarjana Pertanian (S.P.), Agribisnis</h3>
-        <p>Universitas Jambi. Skripsi: Analisis Alokasi Curahan Tenaga Kerja pada usahatani padi di Kecamatan Maro Sebo, Kabupaten Muaro Jambi, dengan 82 responden.</p>
+      <article class="pcard rv">
+        <div class="pimg b"><img src="brewly-home.jpg" alt="Brewly beranda" loading="lazy"><img src="brewly-laporan.jpg" alt="Brewly laporan" loading="lazy"></div>
+        <span class="ptop">Flutter · SQLite · Dalam pengembangan</span>
+        <h3 class="disp">Brewly</h3>
+        <p>Aplikasi hitung bisnis kopi: penjualan dengan HPP, laba, dan margin otomatis, menu produk dan stok bahan baku, pengeluaran, serta laporan omzet dan laba dengan ekspor PDF.</p>
+        <details class="more"><summary><span class="btn">Detail →</span></summary>
+          <div class="shots">
+            <a href="brewly-home.jpg" target="_blank" rel="noopener"><img src="brewly-home.jpg" alt="Brewly beranda" loading="lazy"></a>
+            <a href="brewly-produk.jpg" target="_blank" rel="noopener"><img src="brewly-produk.jpg" alt="Brewly produk" loading="lazy"></a>
+            <a href="brewly-bahan.jpg" target="_blank" rel="noopener"><img src="brewly-bahan.jpg" alt="Brewly bahan" loading="lazy"></a>
+            <a href="brewly-penjualan.jpg" target="_blank" rel="noopener"><img src="brewly-penjualan.jpg" alt="Brewly penjualan" loading="lazy"></a>
+            <a href="brewly-pengeluaran.jpg" target="_blank" rel="noopener"><img src="brewly-pengeluaran.jpg" alt="Brewly pengeluaran" loading="lazy"></a>
+            <a href="brewly-laporan.jpg" target="_blank" rel="noopener"><img src="brewly-laporan.jpg" alt="Brewly laporan" loading="lazy"></a>
+          </div><p class="note">Data pada tangkapan layar adalah contoh.</p></details>
       </article>
-    </section>
 
-    <section id="kontak" aria-labelledby="h-kon">
-      <div class="contact glass">
-        <div class="sec-head" style="margin:0">
-          <span class="eyebrow">Kontak</span>
-          <h2 id="h-kon">Mari bicara</h2>
-        </div>
-        <p>Saya terbuka untuk posisi di bidang pertanahan, GIS, dan administrasi maupun pengembangan aplikasi. Berdomisili di Provinsi Jambi.</p>
-        <div class="rows" id="rows"></div>
-      </div>
-    </section>
+      <article class="pcard rv">
+        <div class="pimg c"><span class="kaito disp">KAITO</span></div>
+        <span class="ptop">Python · faster-whisper · SQLite · Eksperimen</span>
+        <h3 class="disp">KAITO</h3>
+        <p>Asisten AI desktop berbasis suara. Sudah merekam dan mentranskripsi Bahasa Indonesia; avatar Live2D dan kontrol PC masih direncanakan.</p>
+      </article>
 
-    <p class="foot">Rafi Pratama Putra · Jambi, Indonesia</p>
-  </main>
-</div>
+      <article class="pcard rv">
+        <a class="pimg a" href="peta-tora.jpg" target="_blank" rel="noopener" style="padding:0;display:block"><img src="peta-tora.jpg" alt="Peta indikatif TORA" loading="lazy" style="height:100%;width:100%;object-fit:cover;border-radius:0;box-shadow:none"></a>
+        <span class="ptop">ArcGIS Pro · GIS / Pemetaan</span>
+        <h3 class="disp">Peta Indikatif TORA</h3>
+        <p>Peta indikasi indikatif TORA Desa Baru Nalo, Sungai Pinang, dan Tiangko untuk mendukung kerja GTRA Merangin 2026.</p>
+        <a class="btn" href="peta-tora.jpg" target="_blank" rel="noopener">Lihat peta →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="keahlian">
+  <div class="wrap">
+    <h2 class="disp rv">Keahlian</h2>
+    <div class="sgrid">
+      <div class="sk rv"><span class="tag"></span><h3>Pertanahan &amp; GIS</h3><ul><li>Identifikasi indikatif TORA</li><li>ArcGIS Pro, poligon, ekspor SHP</li><li>Data spasial dan nonspasial</li><li>Laporan formal instansi</li></ul></div>
+      <div class="sk rv"><span class="tag"></span><h3>Administrasi &amp; kantor</h3><ul><li>Word, Excel, PowerPoint, Notion, Google Workspace</li><li>Pengolahan dan validasi data</li><li>Laporan triwulan dan akhir, surat tugas</li><li>Cepat belajar dan adaptif</li></ul></div>
+      <div class="sk rv"><span class="tag"></span><h3>Pengembangan</h3><ul><li>Flutter dan Dart</li><li>SQLite</li><li>Python, speech-to-text</li><li>Desain UI aplikasi</li></ul></div>
+      <div class="sk rv"><span class="tag"></span><h3>Desain &amp; konten</h3><ul><li>UI/UX</li><li>Fotografi</li><li>Videografi</li></ul></div>
+    </div>
+    <div class="edu rv"><small>Pendidikan</small><h3>Sarjana Pertanian (S.P.), Agribisnis</h3>
+      <p>Universitas Jambi, 2019 sampai 2025, IPK 3,36. Skripsi: Analisis Alokasi Curahan Tenaga Kerja pada usahatani padi sawah di Kecamatan Maro Sebo, Kabupaten Muaro Jambi, dengan 82 responden.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="kontak">
+  <div class="wrap">
+    <h2 class="disp rv">Mari bicara</h2>
+    <p class="rv">Saya terbuka untuk posisi di bidang pertanahan, GIS, administrasi, maupun pengembangan aplikasi. Berdomisili di Provinsi Jambi.</p>
+    <div class="rows rv" id="rows"></div>
+  </div>
+  <p class="foot">Rafi Pratama Putra · Jambi, Indonesia</p>
+</section>
 
 <script>
-/* Isi kontak di sini. Baris yang kosong tidak ditampilkan. */
-var CONTACT = [
-  { k: "Email", v: "rafipratama450@gmail.com", href: "" },
-  { k: "WhatsApp", v: "085121970898", href: "https://wa.me/6285121970898" }
+var CONTACT=[
+  {k:"Email",v:"rafipratama450@gmail.com",href:"mailto:rafipratama450@gmail.com"},
+  {k:"WhatsApp",v:"085121970898",href:"https://wa.me/6285121970898"}
 ];
-
-(function () {
-  var rows = document.getElementById("rows");
-  var shown = 0;
-  CONTACT.forEach(function (c) {
-    if (!c.v) return;
-    shown++;
-    var row = document.createElement("div");
-    row.className = "row";
-    var k = document.createElement("span");
-    k.className = "k"; k.textContent = c.k;
-    var v;
-    if (c.href && c.href.indexOf("https://") === 0) {
-      v = document.createElement("a"); v.href = c.href; v.target = "_blank"; v.rel = "noopener";
-    } else { v = document.createElement("span"); }
-    v.className = "v"; v.textContent = c.v;
-    row.appendChild(k); row.appendChild(v);
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "copy"; b.textContent = "Salin";
-    b.addEventListener("click", function () {
-      var done = function () { b.textContent = "Tersalin"; setTimeout(function () { b.textContent = "Salin"; }, 1600); };
-      try {
-        navigator.clipboard.writeText(c.v).then(done, function () { sel(v); });
-      } catch (e) { sel(v); }
-    });
-    row.appendChild(b);
-    rows.appendChild(row);
+(function(){
+  var rows=document.getElementById("rows");
+  CONTACT.forEach(function(c){
+    var r=document.createElement("div");r.className="row";
+    var k=document.createElement("span");k.className="k";k.textContent=c.k;
+    var v=document.createElement("a");v.className="v";v.textContent=c.v;v.href=c.href;if(c.href.indexOf("https")===0){v.target="_blank";v.rel="noopener"}
+    var b=document.createElement("button");b.type="button";b.className="copy";b.textContent="Salin";
+    b.onclick=function(){try{navigator.clipboard.writeText(c.v).then(function(){b.textContent="Tersalin";setTimeout(function(){b.textContent="Salin"},1500)})}catch(e){}};
+    r.appendChild(k);r.appendChild(v);r.appendChild(b);rows.appendChild(r);
   });
-  function sel(el) {
-    try {
-      var r = document.createRange(); r.selectNodeContents(el);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    } catch (e) {}
-  }
-  if (!shown) {
-    var p = document.createElement("p");
-    p.textContent = "Detail kontak akan ditampilkan di sini.";
-    rows.appendChild(p);
-  }
 
-  var links = Array.prototype.slice.call(document.querySelectorAll(".rail a"));
-  var ids = links.map(function (a) { return a.getAttribute("href").slice(1); });
-  function setActive(id) {
-    links.forEach(function (a) {
-      if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "true");
-      else a.removeAttribute("aria-current");
+
+  /* ===== Ular 3D buatan sendiri (canvas, tanpa library) ===== */
+  (function(){
+    var stage=document.getElementById("stage"),cb=document.getElementById("snBack"),cf=document.getElementById("snFront");
+    if(!cb||!cf) return;
+    var xb=cb.getContext("2d"),xf=cf.getContext("2d");
+    var N=260,W=0,H=0,SW=0,SH=0,dpr=1,grow=0,target=0,t0=performance.now();
+    var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+    var PAL=["#2f6df6","#2f6df6","#f2c230","#f2c230"];
+    function size(){
+      dpr=Math.min(devicePixelRatio||1,2);
+      var r=cb.getBoundingClientRect(),sr=stage.getBoundingClientRect();
+      W=r.width;H=r.height;SW=sr.width;SH=sr.height;
+      [cb,cf].forEach(function(c){c.width=W*dpr;c.height=H*dpr});
+      [xb,xf].forEach(function(x){x.setTransform(dpr,0,0,dpr,0,0)});
+    }
+    function shade(hex,k){var n=parseInt(hex.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;
+      r=Math.max(0,Math.min(255,r*k|0));g=Math.max(0,Math.min(255,g*k|0));b=Math.max(0,Math.min(255,b*k|0));return "rgb("+r+","+g+","+b+")"}
+    function pt(i,m,t){
+      var s=i/(N-1);
+      var turns=2.1;
+      var aHead=0.16*Math.PI;
+      var a=aHead-(1-s)*turns*Math.PI*2+0.12*Math.sin(s*14-t*1.7)+0.04*Math.sin(t*.6);
+      var y=SH*(0.86-0.46*s)+SH*0.01*Math.sin(s*20-t*2.2);
+      var r=SW*(0.52-0.10*s)*(1+0.04*Math.sin(s*9+t*.9));
+      var x=W/2+r*Math.cos(a),z=r*Math.sin(a)*0.62;
+      /* ujung: kepala terangkat ke kanan, di samping wajah */
+      var lift=Math.max(0,(s-0.86)/0.14);lift=lift*lift;
+      x+=SW*0.10*lift;y-=SH*0.20*lift+SH*0.02*Math.sin(t*1.3)*lift;
+      var persp=1+z/(SW*6);
+      var rad=SW*0.044*persp*(0.28+0.72*Math.min(1,s*3.2))*(s>0.93?1+(s-0.93)*5:1);
+      return {x:x,y:y+SH*0.08,z:z,rad:rad,i:i,s:s};
+    }
+    function seg(ctx,p,k){
+      var base=PAL[Math.floor(p.i/2)%4];
+      var g=ctx.createRadialGradient(p.x-p.rad*.35,p.y-p.rad*.4,p.rad*.1,p.x,p.y,p.rad*1.05);
+      g.addColorStop(0,shade(base,1.55));g.addColorStop(.45,shade(base,1));g.addColorStop(1,shade(base,.38));
+      ctx.beginPath();ctx.arc(p.x,p.y,p.rad,0,7);ctx.fillStyle=g;ctx.fill();
+      ctx.lineWidth=Math.max(.6,p.rad*.09);ctx.strokeStyle="rgba(10,16,40,.55)";ctx.stroke();
+      /* kilau krom */
+      ctx.beginPath();ctx.ellipse(p.x-p.rad*.3,p.y-p.rad*.42,p.rad*.34,p.rad*.15,-.6,0,7);
+      ctx.fillStyle="rgba(255,255,255,.55)";ctx.fill();
+    }
+    function head(ctx,p,q,t){
+      var ang=Math.atan2(p.y-q.y,p.x-q.x),R=p.rad*1.25;
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(ang);
+      /* lidah */
+      var fl=Math.max(0,Math.sin(t*5))*R*.9;
+      if(fl>2){ctx.strokeStyle="#d8324a";ctx.lineWidth=R*.07;ctx.lineCap="round";
+        ctx.beginPath();ctx.moveTo(R*1.45,0);ctx.lineTo(R*1.45+fl,0);ctx.moveTo(R*1.45+fl,0);ctx.lineTo(R*1.45+fl+R*.28,-R*.2);
+        ctx.moveTo(R*1.45+fl,0);ctx.lineTo(R*1.45+fl+R*.28,R*.2);ctx.stroke();}
+      var g=ctx.createRadialGradient(-R*.2,-R*.4,R*.1,0,0,R*1.5);
+      g.addColorStop(0,"#ffe58a");g.addColorStop(.5,"#e0aa1c");g.addColorStop(1,"#6b4a05");
+      ctx.beginPath();ctx.ellipse(R*.45,0,R*1.05,R*.82,0,0,7);ctx.fillStyle=g;ctx.fill();
+      ctx.lineWidth=R*.07;ctx.strokeStyle="rgba(10,16,40,.6)";ctx.stroke();
+      /* motif biru di dahi */
+      ctx.beginPath();ctx.moveTo(-R*.2,0);ctx.lineTo(R*.15,-R*.32);ctx.lineTo(R*.5,0);ctx.lineTo(R*.15,R*.32);ctx.closePath();
+      ctx.fillStyle="#2f6df6";ctx.fill();
+      /* mata */
+      [-1,1].forEach(function(sg){
+        ctx.beginPath();ctx.ellipse(R*.78,sg*R*.42,R*.2,R*.15,0,0,7);ctx.fillStyle="#fff";ctx.fill();
+        ctx.beginPath();ctx.arc(R*.82,sg*R*.42,R*.1,0,7);ctx.fillStyle="#0b1230";ctx.fill();
+        ctx.beginPath();ctx.arc(R*.78,sg*R*.38,R*.035,0,7);ctx.fillStyle="#fff";ctx.fill();
+      });
+      ctx.restore();
+    }
+    function frame(now){
+      var t=(now-t0)/1000;
+      grow+=(target-grow)*(reduce?1:0.035);
+      if(Math.abs(target-grow)<.002)grow=target;
+      xb.clearRect(0,0,W,H);xf.clearRect(0,0,W,H);
+      var m=Math.floor(grow*N);
+      if(m>2){
+        var pts=[];for(var i=0;i<m;i++)pts.push(pt(i,m,reduce?0:t));
+        var bk=[],fr=[];
+        pts.forEach(function(p,i){ if(i===m-1) return; (p.z<0?bk:fr).push(p)});
+        /* urut sepanjang tubuh agar sisik saling menumpuk mulus */
+        xf.save();xf.shadowColor="rgba(10,16,40,.35)";xf.shadowBlur=10;xf.shadowOffsetY=4;
+        bk.forEach(function(p){seg(xb,p)});
+        fr.forEach(function(p){seg(xf,p)});
+        xf.restore();
+        var hp=pts[m-1],q=pts[Math.max(0,m-6)];
+        /* kepala selalu digambar di depan */
+        head(xf,hp,q,reduce?0:t);
+      }
+      requestAnimationFrame(frame);
+    }
+    window.__setAura=function(on){target=on?1:0;if(on&&!grow&&reduce)grow=0};
+    size();addEventListener("resize",size);
+    if("ResizeObserver" in window)new ResizeObserver(size).observe(stage);
+    requestAnimationFrame(frame);
+  })();
+
+  var btn=document.getElementById("auraBtn"),lbl=document.getElementById("auraLbl");
+  btn.addEventListener("click",function(){
+    var on=document.body.classList.toggle("aura-on");
+    btn.setAttribute("aria-pressed",on);lbl.textContent=on?"Hide aura":"Show aura";window.__setAura&&window.__setAura(on);
+  });
+
+  var links=[].slice.call(document.querySelectorAll(".nav a[href^='#']:not(.brand)"));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    [].forEach.call(document.querySelectorAll(".rv"),function(el){io.observe(el)});
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
+    secs.forEach(function(s){s&&so.observe(s)});
+  } else {[].forEach.call(document.querySelectorAll(".rv"),function(el){el.classList.add("in")})}
+
+  /* parallax tilt on portrait (desktop only) */
+  var stage=document.getElementById("stage");
+  if(matchMedia("(hover:hover) and (min-width:961px)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+    document.querySelector(".hero").addEventListener("mousemove",function(e){
+      var x=(e.clientX/innerWidth-.5)*10,y=(e.clientY/innerHeight-.5)*6;
+      stage.style.transform="translate("+x+"px,"+y+"px)";
     });
-  }
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.id); });
-    }, { rootMargin: "-35% 0px -55% 0px" });
-    ids.forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
   }
 })();
 </script>
-
 </body>
 </html>
